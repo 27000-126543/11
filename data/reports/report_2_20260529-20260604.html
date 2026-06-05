@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>健康周报 - 市场销售部</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { text-align: center; background: #f0f8ff; padding: 20px; border-radius: 10px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 20px 0; }
+        .stat-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .stat-value { font-size: 24px; font-weight: bold; color: #2c3e50; }
+        .stat-label { font-size: 12px; color: #7f8c8d; }
+        .high { color: #e74c3c; }
+        .medium { color: #f39c12; }
+        .low { color: #27ae60; }
+        .chart-container { margin: 30px 0; text-align: center; }
+        .chart-container img { max-width: 100%; border-radius: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f5f5f5; }
+        tr:hover { background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 市场销售部 健康周报</h1>
+        <p>统计周期: 2026-05-29 至 2026-06-04</p>
+        <p>生成时间: 2026-06-05 19:21:40</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">54</div>
+            <div class="stat-label">员工总数</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">异常记录数</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value low">0.0%</div>
+            <div class="stat-label">异常率</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">1.85%</div>
+            <div class="stat-label">体检参与率</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">8,310</div>
+            <div class="stat-label">平均步数</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">6.6h</div>
+            <div class="stat-label">平均睡眠</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">76.3</div>
+            <div class="stat-label">平均心率</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value high">21</div>
+            <div class="stat-label">高危员工</div>
+        </div>
+    </div>
+
+    <h2>📈 趋势图表</h2>
+    <div class="chart-container">
+        <img src="data/charts/dept_3_trend_20260529.png" alt="趋势图">
+    </div>
+    <div class="chart-container">
+        <img src="data/charts/dept_3_severity_20260529.png" alt="严重程度分布图">
+    </div>
+
+    <h2>⚠️ 预警分布</h2>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">心率异常</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">2</div>
+            <div class="stat-label">睡眠异常</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">步数异常</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">2/3</div>
+            <div class="stat-label">已处理/总数</div>
+        </div>
+    </div>
+
+    <h2>🔔 预警最多员工 Top 5</h2>
+    <table>
+        <tr>
+            <th>排名</th>
+            <th>员工姓名</th>
+            <th>工号</th>
+            <th>预警总数</th>
+            <th>高危预警</th>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>吴勇</td>
+            <td>EMP61903</td>
+            <td>2</td>
+            <td class="high">0</td>
+        </tr>
+            
+        <tr>
+            <td>2</td>
+            <td>黄强</td>
+            <td>EMP10883</td>
+            <td>1</td>
+            <td class="high">1</td>
+        </tr>
+            
+    </table>
+
+    <h2>🎯 风险分布</h2>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value high">21</div>
+            <div class="stat-label">高风险</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value medium">19</div>
+            <div class="stat-label">中风险</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value low">14</div>
+            <div class="stat-label">低风险</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">正常</div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; color: #999; font-size: 12px;">
+        <p>本报告由员工健康管理系统自动生成</p>
+    </footer>
+</body>
+</html>
+        
