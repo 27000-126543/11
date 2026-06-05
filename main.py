@@ -201,7 +201,19 @@ def export_health_data(
         metric_types=metric_types
     )
     log_audit("数据导出", f"导出健康数据Excel: {os.path.basename(file_path)}", "admin")
-    return FileResponse(file_path, media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", filename=os.path.basename(file_path))
+    
+    filename = os.path.basename(file_path)
+    headers = {
+        "Content-Disposition": f"attachment; filename*=UTF-8''{filename}",
+        "Access-Control-Expose-Headers": "Content-Disposition"
+    }
+    
+    return FileResponse(
+        path=file_path,
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        filename=filename,
+        headers=headers
+    )
 
 
 @app.get("/api/tickets", tags=["预警工单"])

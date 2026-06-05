@@ -249,7 +249,11 @@ def seed_health_profiles(db, employees):
             emergency_contact=random.choice(FIRST_NAMES) + random.choice(LAST_NAMES),
             emergency_phone=generate_phone(),
             last_checkup_date=date.today() - timedelta(days=random.randint(30, 365)),
-            risk_level=random.choice(["low", "medium", "high"]),
+            risk_level=random.choices(
+                ["normal", "low", "medium", "high"],
+                weights=[0.55, 0.30, 0.12, 0.03],
+                k=1
+            )[0],
             health_score=random.randint(60, 95)
         )
         profiles.append(profile)
